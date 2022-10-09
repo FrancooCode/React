@@ -1,14 +1,16 @@
-import ItemListContainer from "./ItemListContainer/ItemListContainer";
-import NavBar from "./componets/NavBar/NavBar";
-
-
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import CartWidget from "./components/NavBar/NavBar"
+import "./app.css"
+import NavBar from "./components/NavBar/NavBar";
+// Componente
 function App() {
+  let misEstilos = { backgroundColor: "lightblue" };
+
   return (
-    <>
-      <NavBar/>
-      <ItemListContainer 
-      greeting= "Bienvenido a BlendHouse"/>
-    </>
+    <div style={misEstilos}>
+      <NavBar />
+      <ItemListContainer greeting="Welcome to HypeSNKRS" />
+    </div>
   );
 }
 
