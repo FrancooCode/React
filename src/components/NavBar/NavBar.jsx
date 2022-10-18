@@ -3,7 +3,7 @@ import "./navbar.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-// 4. Todas las etiquetas <a> las reemplazamos por <Link> o <NavLink>
+
 function NavBar() {
   return (
     <div className="nav-bar">
