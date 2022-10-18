@@ -18,7 +18,7 @@ export default function Button(props) {
 
   function handleClick() {
     setColorBtn({ backgroundColor: "rgb(255, 50, 50)" });
-    
+    // 🛑 colorBtn = { backgroundColor: "rgb(157, 150, 00)"}
   }
 
   return (

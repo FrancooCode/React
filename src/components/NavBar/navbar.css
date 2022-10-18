@@ -5,7 +5,7 @@
   width: 100%;
   margin: 0;  
   height: 90px;
-  background-color: rgb(213, 255, 96);
+  background-color: rgb(222, 232, 81);
   top: 0;
   box-shadow: 0px 3px 5px 0.42;
 }
@@ -14,9 +14,9 @@ a{
   text-decoration: none;
   font-weight: 500;
   font-size: 1.3em;
-  color:rgb(0, 0, 0)
+  color:rgb(19, 19, 18)
 }
 
-.cartwidget{
-  height: 30px;
+.carrito{
+  height: 40px;
 }
