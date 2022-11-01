@@ -5,7 +5,7 @@ import FlexWrapper from "../FlexWrapper/FlexWrapper";
 function ItemList(props) {
   return (
     <>
-      <FlexWrapper>
+      <FlexWrapper rows={true}>
         {props.coursesList.map((curso) => {
           return (
             <Card

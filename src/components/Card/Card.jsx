@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
-import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import "./card.css";
 
@@ -41,7 +40,7 @@ export default function Card(props) {
         <h2>{props.title}</h2>
         <p>{props.detail}</p>
         <h4 style={priceStyle}>
-          {props.offer ? <p>Oferta!</p> : <></>}$ {props.price}
+          {props.offer && <p>Oferta!</p>}$ {props.price}
         </h4>
       </div>
       <Link to={`/curso/${props.id}`}>

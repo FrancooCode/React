@@ -1,26 +1,36 @@
 import React, { useState, useEffect } from "react";
 
-import { getUnCurso } from "../../mockAPI/mockAPI";
+import { getUnCurso } from "../../services/firebase";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import CardDetail from "./CardDetail";
-
 
 import { useParams } from "react-router-dom";
 
 function ItemDetailContainer(props) {
-  const [curso, setCurso] = useState([]);
-
+  const [curso, setCurso] = useState({});
+  const [feedbackMsg, setFeedbackMsg] = useState(null);
   const { itemID } = useParams();
 
+  console.log("Item id", itemID );
   useEffect(() => {
-    getUnCurso(itemID).then((data) => {
-      setCurso(data);
-    });
+    getUnCurso(itemID)
+      .then((data) => {
+        setCurso(data);
+      })
+      .catch((error) => {
+        console.log("Catch?")
+        setFeedbackMsg(error.message);
+      });
   }, [itemID]);
 
+ 
   return (
     <FlexWrapper>
-      <CardDetail curso={curso} />
+      {feedbackMsg !== null ? (
+        <h4>Error: {feedbackMsg}</h4>
+      ) : (
+        <CardDetail curso={curso} />
+      )}
     </FlexWrapper>
   );
 }
